@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /sandbox/old/
-Disallow: /upload/
-Sitemap: https://semov777.com/sitemap.xml
