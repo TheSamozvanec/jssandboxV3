@@ -52,7 +52,9 @@ color:blue;
   lgIn.use=useIp;
   pwdIn.use=useIp;
   msg.use=useTxt;
-  
+  emlIn.addEventListener('input',skipErr);
+  lgIn.addEventListener('input',skipErr);
+  pwdIn.addEventListener('input',skipErr);
   return {emlIn, lgIn, pwdIn,smt,msg}
   function useTxt(arg) {
     if(arg.cls===true){
@@ -80,6 +82,9 @@ color:blue;
      default:
         throw new Error('неверный аргумент')
    }
+  }
+  function skipErr(ev){
+    this.classList.remove('err')
   }
 }
 export const help = `
