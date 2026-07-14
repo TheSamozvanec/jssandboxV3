@@ -2,7 +2,7 @@ export const api = {
     baseURL:'https://poligon.semov777.com/api',
     auth:{
         sin:'/auth/sign-in',
-        sout:'/auth/sign-out',
+        sup:'/auth/sign-up',
         chek:'/auth/chek',
         out:'/auth/logaut'
     },
