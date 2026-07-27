@@ -1,13 +1,13 @@
 export function regUI(monitor, style){
   monitor.innerHTML=`
 <div class='auth'>
-   <input type='text' class='email ip' placeholder='email'>
-   <input type='text' class='login ip' placeholder='login' >
-   <input type='text' class='password ip' placeholder = 'password'>
+   <input type='text' class='email ip' placeholder='email' autocomplete='off'>
+   <input type='text' class='login ip' placeholder='login' autocomplete='off'>
+   <input type='text' class='password ip' placeholder = 'password' autocomplete='off'>
 
    <button class='smt'>отправить</button>
 </div>
-<p class='msg'>Авторизация</p>
+<p class='msg'>Регистрация пользователя</p>
 `
 style.innerHTML=`
 
@@ -57,9 +57,9 @@ color:blue;
   pwdIn.addEventListener('input',skipErr);
   return {emlIn, lgIn, pwdIn,smt,msg}
   function useTxt(arg) {
+    this.classList.remove('err','suc');
     if(arg.cls===true){
-      this.classList.remove('err','suc');
-      this.textContent='Регистрация прльзователя'
+      this.textContent='Регистрация пользователя'
     }
     if(arg.err){
       this.classList.add('err');
